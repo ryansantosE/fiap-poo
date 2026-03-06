@@ -37,5 +37,5 @@ public class SistemaPrincipal {
                 + chaveRoyal.desgastada + ", chaveiro: " + chaveRoyal.tipoDeChaveiro);
         System.out.println("Harley -> material: " + chaveHarley.material + ", desgastada: " 
                 + chaveHarley.desgastada + ", chaveiro: " + chaveHarley.tipoDeChaveiro);
-    }   // <-- fecha o main
-}       // <-- fecha a classex		
+    }
+}
