@@ -2,28 +2,39 @@ package br.com.fiapride.model;
 
 public class ChaveMoto {
 
-    public String material;
-    public boolean desgastada;
-    public String tipoDeChaveiro;
-
-    public ChaveMoto() {
-    }
+    private String material;
+    private boolean desgastada;
+    private String tipoDeChaveiro;
 
     public void usarChave() {
         if (!desgastada) {
             desgastada = true;
-            System.out.println("A chave foi usada e agora está desgastada.");
-        } else {
-            System.out.println("A chave já está desgastada.");
         }
     }
 
-    public void alterarMaterial(String novoMaterial) {
-        if (novoMaterial == null || novoMaterial.trim().isEmpty()) {
-            System.out.println("Erro: material inválido.");
-            return;
+    public void alterarMaterial() {
+        setMaterial("Metal");
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public boolean getDesgastada() {
+        return desgastada;
+    }
+
+    public String getTipoDeChaveiro() {
+        return tipoDeChaveiro;
+    }
+
+    private void setMaterial(String material) {
+        if (material != null && !material.trim().isEmpty()) {
+            this.material = material;
         }
-        material = novoMaterial;
-        System.out.println("Material alterado para: " + material);
+    }
+
+    private void setTipoDeChaveiro(String tipoDeChaveiro) {
+        this.tipoDeChaveiro = tipoDeChaveiro;
     }
 }
